@@ -7,7 +7,7 @@ JEMHopQA (Japanese Explainable Multi-hop Question Answering)は、回答導出�
 本レポジトリは以下のデータセットおよびスクリプトを提供します。
 
 - JEMHopQA Corpus (`corpus/train.json`, `corpus/dev.json`)
-- 評価スクリプト (TBA )
+- 評価スクリプト (TBA)
 - クラウドソーシングインターフェース (TBA)
 
 また、本データセットは以下のWikipediaのバージョンに対応しています。[森羅プロジェクト](http://shinra-project.info/)のページからダウンロードしてご使用ください。
@@ -64,10 +64,10 @@ JEMHopQA (Japanese Explainable Multi-hop Question Answering)は、回答導出�
 
 ## データの統計量
 
-|              | 問題数（計） | 構成問題 | 比較問題 |
-| :----------- | -----------: | -------: | -------: |
-| 訓練データ   |         1059 |      392 |      667 |
-| 開発用データ |          120 |       47 |       73 |
+|                    | 問題数（計） | 構成問題 | 比較問題 |
+| :----------------- | -----------: | -------: | -------: |
+| 訓練データ (train) |         1059 |      392 |      667 |
+| 開発用データ (dev) |          120 |       47 |       73 |
 
 
 
@@ -82,3 +82,4 @@ JEMHopQA (Japanese Explainable Multi-hop Question Answering)は、回答導出�
   - 石井愛, 井之上直也, 関根聡. “根拠を説明可能な質問応答システムのための 日本語マルチホップ QA データセット構築”. 言語処理学会第29回年次大会(NLP2023) 発表論文集
 
 - 本データセット構築の一部はJSPS 科研費 JP20269633 および 19K20332 の助成を受けたものです。記して感謝いたします。
+

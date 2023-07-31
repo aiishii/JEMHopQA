@@ -68,8 +68,8 @@ Below is an example of data for a set of questions, answers, and derivations.
 
 |           |  all | compositional | comparison |
 | :-------- | ---: | ------------: | ---------: |
-| dev set   | 1059 |           392 |        667 |
-| train set |  120 |            47 |         73 |
+| train set | 1059 |           392 |        667 |
+| dev set   |  120 |            47 |         73 |
 
 
 
