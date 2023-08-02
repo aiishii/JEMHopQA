@@ -44,7 +44,7 @@ JEMHopQA (Japanese Explainable Multi-hop Question Answering)は、回答導出�
 		"type": "comparison",
 		"question": "『仮面ライダー電王』と『あまちゃん』、放送回数が多いのはどちらでしょう？",
 		"answer": "あまちゃん",
-		"derivations": [["仮面ライダー電王","放送回数",	["49"]],["あまちゃん","放送回数",["156"]],
+		"derivations": [["仮面ライダー電王","放送回数",["49"]],["あまちゃん","放送回数",["156"]],
 		"page_ids": ["1398776","2588518"],
 		"time_dependent": false
 	},
@@ -73,13 +73,15 @@ JEMHopQA (Japanese Explainable Multi-hop Question Answering)は、回答導出�
 
 ## ライセンス・謝辞
 
-- 本データセットの著作権は[森羅プロジェクト](http://shinra-project.info/)に帰属し、 [クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt)*の条件のもとに、利用・再配布が許諾されます。*
+- 本データセットの著作権は[理化学研究所](https://www.riken.jp/)に帰属し、 [クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt)*の条件のもとに、利用・再配布が許諾されます。*
 
   ![https://creativecommons.org/licenses/by-sa/4.0/legalcode](https://i.imgur.com/7HLJWMM.png)
 
 - 本データセットを利用した研究成果を発表される際は、以下の文献を参照いただけますと幸いです。
 
   - 石井愛, 井之上直也, 関根聡. “根拠を説明可能な質問応答システムのための 日本語マルチホップ QA データセット構築”. 言語処理学会第29回年次大会(NLP2023) 発表論文集
+
+- Special thanks: 鈴木久美先生
 
 - 本データセット構築の一部はJSPS 科研費 JP20269633 および 19K20332 の助成を受けたものです。記して感謝いたします。
 

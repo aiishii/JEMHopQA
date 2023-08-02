@@ -46,7 +46,7 @@ Below is an example of data for a set of questions, answers, and derivations.
 		"type": "comparison",
 		"question": "『仮面ライダー電王』と『あまちゃん』、放送回数が多いのはどちらでしょう？",
 		"answer": "あまちゃん",
-		"derivations": [["仮面ライダー電王","放送回数",	["49"]],["あまちゃん","放送回数",["156"]],
+		"derivations": [["仮面ライダー電王","放送回数",["49"]],["あまちゃん","放送回数",["156"]],
 		"page_ids": ["1398776","2588518"],
 		"time_dependent": false
 	},
@@ -75,12 +75,14 @@ Below is an example of data for a set of questions, answers, and derivations.
 
 ## License and Acknowledgements
 
-- This dataset is copyrighted by the [SHINRA Project](http://shinra-project.info/) and is licensed for use and redistribution under the terms of the [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt). 
+- This dataset is copyrighted by the [RIKEN](https://www.riken.jp/en/about/) and is licensed for use and redistribution under the terms of the [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt). 
 
   ![https://creativecommons.org/licenses/by-sa/4.0/legalcode](https://i.imgur.com/7HLJWMM.png)
 
 - We would appreciate it if you could refer to the following references when presenting your research results using this dataset.
 
   - Ai Ishii, Naoya Inoue, Satoshi Sekine. "Construction of a Japanese multi-hop QA dataset for a question-answering system that can explain its reasons". Proceedings of the 29th Annual Conference of the Association for Natural Language Processing (NLP2023)
+
+- Special thanks to Dr. Hisami Suzuki.
 
 - This work was supported by the  JSPS Grants-in-Aid for Scientific Research JP20269633 and 19K20332. 
