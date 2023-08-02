@@ -9,7 +9,7 @@ JEMHopQA (Japanese Explainable Multi-hop Question Answering) is a Japanese multi
 This repository contains the following datasets and script:
 
 - JEMHopQA Corpus (`corpus/train.json`, `corpus/dev.json`)
-- Evaluation script (TBA )
+- Evaluation script (TBA)
 - Crowdsourcing interface (TBA)
 
 This dataset is compatible with the following Wikipedia versions. Please download and use it from the [SHINRA Project](http://shinra-project.info/) page.
@@ -86,3 +86,4 @@ Below is an example of data for a set of questions, answers, and derivations.
 - Special thanks to Dr. Hisami Suzuki.
 
 - This work was supported by the  JSPS Grants-in-Aid for Scientific Research JP20269633 and 19K20332. 
+
