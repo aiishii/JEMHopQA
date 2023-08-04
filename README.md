@@ -70,6 +70,7 @@ Below is an example of data for a set of questions, answers, and derivations.
 | :-------- | ---: | ------------: | ---------: |
 | train set | 1059 |           392 |        667 |
 | dev set   |  120 |            47 |         73 |
+| total     | 1179 |           439 |        740 |
 
 
 
