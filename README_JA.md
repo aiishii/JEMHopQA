@@ -80,7 +80,9 @@ JEMHopQA (Japanese Explainable Multi-hop Question Answering)は、回答導出�
 
 - 本データセットを利用した研究成果を発表される際は、以下の文献を参照いただけますと幸いです。
 
-  - 石井愛, 井之上直也, 関根聡. “根拠を説明可能な質問応答システムのための 日本語マルチホップ QA データセット構築”. 言語処理学会第29回年次大会(NLP2023) 発表論文集
+  - 石井愛, 井之上直也, 関根聡. 根拠を説明可能な質問応答システムのための日本語マルチホップQAデータセット構築. 言語処理学会第29回年次大会論文集, 4 pages, March 2023.
+
+  - [https://www.anlp.jp/proceedings/annual_meeting/2023/pdf_dir/Q8-14.pdf](https://www.anlp.jp/proceedings/annual_meeting/2023/pdf_dir/Q8-14.pdf)
 
 - Special thanks: 鈴木久美先生
 

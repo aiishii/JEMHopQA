@@ -83,6 +83,9 @@ Below is an example of data for a set of questions, answers, and derivations.
 - We would appreciate it if you could refer to the following references when presenting your research results using this dataset.
 
   - Ai Ishii, Naoya Inoue, Satoshi Sekine. "Construction of a Japanese multi-hop QA dataset for a question-answering system that can explain its reasons". Proceedings of the 29th Annual Conference of the Association for Natural Language Processing (NLP2023)
+  - 石井愛, 井之上直也, 関根聡. 根拠を説明可能な質問応答システムのための日本語マルチホップQAデータセット構築. 言語処理学会第29回年次大会論文集, 4 pages, March 2023.
+
+  - [https://www.anlp.jp/proceedings/annual_meeting/2023/pdf_dir/Q8-14.pdf](https://www.anlp.jp/proceedings/annual_meeting/2023/pdf_dir/Q8-14.pdf)
 
 - Special thanks to Dr. Hisami Suzuki.
 
