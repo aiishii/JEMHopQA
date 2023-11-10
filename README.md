@@ -1,6 +1,8 @@
 # JEMHopQA
 
+#### New Update (November 10, 2023)
 
+We have released [corpus_ver1.1](corpus_ver1.1) (`corpus_ver1.1/train_ver1.1.json`, `corpus/dev_ver1.1.json`), which contains several fixes for questions, answers, and triples.
 
 ## Introduction
 

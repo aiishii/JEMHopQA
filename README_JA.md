@@ -1,5 +1,9 @@
 # JEMHopQA
 
+#### New Update (November 10, 2023)
+
+[corpus_ver1.1](corpus_ver1.1) (`corpus_ver1.1/train_ver1.1.json`, `corpus/dev_ver1.1.json`)をリリースしました。 このリリースには、質問、回答、トリプルのいくつかの修正が含まれています。
+
 ## はじめに
 
 JEMHopQA (Japanese Explainable Multi-hop Question Answering)は、回答導出ステップの情報付きの日本語の根拠情報付きマルチホップQAデータセットです。質問 (Question)を入力として、回答 (Answer)と導出 (Derivation)を生成するタスクです。導出は導出ステップの集合で、半構造化されたエンティティ間の関係表現です。問題は、Wikipediaの２つの記事の情報をリンクさせて答える構成問題 (compositional)と2つの記事の情報を比較して答える比較問題 (comparison)が含まれています。
