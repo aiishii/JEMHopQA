@@ -125,9 +125,17 @@ Predictionファイルのフォーマットは以下の例のとおりです。
 ## 実行方法
 
 回答と導出の予測結果 (`/path/to/your_prediction.json`)を評価するには以下のコマンドを実行してください。
+
+
+
 `python evaluate.py --pred /path/to/your_prediction.json --label corpus_ver1.1/dev_ver1.1.json`
 
+
+
 TSV形式の予測結果 (`/path/to/your_gpt_prediction.tsv` カラム：qid, predicted_answer, predicted_derivations)をJSONに変換するスクリプトを以下のように利用できます。
+
+
+
 `python3 tsv_to_pred_json.py -tsv /path/to/your_gpt_prediction.tsv -out /path/to/your_prediction.json`
 
 ## 出力フォーマット

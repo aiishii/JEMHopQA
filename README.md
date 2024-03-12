@@ -124,9 +124,17 @@ An example is given below.
 ## How to run
 
 To evaluate your prediction (say `/path/to/your_prediction.json`), run the following command:
+
+
+
 `python evaluate.py --pred /path/to/your_prediction.json --label corpus_ver1.1/dev_ver1.1.json`
 
+
+
 If you have output in TSV (`/path/to/your_gpt_prediction.tsv` has following columns: qid, predicted_answer, predicted_derivations), you can convert it to JSON with `tsv_to_pred_json.py` script.
+
+
+
 `python3 tsv_to_pred_json.py -tsv /path/to/your_gpt_prediction.tsv -out /path/to/your_prediction.json`
 
 ## Output format
