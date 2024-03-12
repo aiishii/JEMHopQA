@@ -12,6 +12,7 @@ import re
 import pulp
 import Levenshtein
 
+
 import json
 import string
 from tqdm import tqdm
@@ -19,7 +20,6 @@ from tqdm import tqdm
 from chikkarpy import Chikkar
 from chikkarpy.dictionarylib import Dictionary as chikkardict
 from sudachipy import Dictionary, SplitMode
-import Levenshtein
 
 chikkar = Chikkar()
 chikkar.add_dictionary(chikkardict())
