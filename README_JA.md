@@ -1,5 +1,9 @@
 # JEMHopQA
 
+#### New Update (March 12, 2024)
+
+評価用スクリプトと、スクリプト内で使用する類義語辞書のサンプルを追加しました。
+
 #### New Update (November 10, 2023)
 
 [corpus_ver1.1](corpus_ver1.1) (`corpus_ver1.1/train_ver1.1.json`, `corpus/dev_ver1.1.json`)をリリースしました。 このリリースには、質問、回答、トリプルのいくつかの修正が含まれています。
@@ -11,7 +15,7 @@ JEMHopQA (Japanese Explainable Multi-hop Question Answering)は、回答導出�
 本レポジトリは以下のデータセットおよびスクリプトを提供します。
 
 - JEMHopQA Corpus (`corpus/train.json`, `corpus/dev.json`)
-- 評価スクリプト (TBA)
+- 評価スクリプト (`evaluate.py`)
 - クラウドソーシングインターフェース (TBA)
 
 また、本データセットは以下のWikipediaのバージョンに対応しています。[森羅プロジェクト](http://shinra-project.info/)のページからダウンロードしてご使用ください。
@@ -76,6 +80,94 @@ JEMHopQA (Japanese Explainable Multi-hop Question Answering)は、回答導出�
 
 
 
+# 評価用スクリプト
+
+評価用スクリプト(`evaluate.py`) は [R4C](https://github.com/naoya-i/r4c/blob/master/src/r4c_evaluate.py) の評価スクリプトに日本語の処理を追加したものです。
+
+## 使用ライブラリ
+
+以下のPythonパッケージをインストールしてください。
+
+- `pulp`
+- `Levenshtein`
+- `tqdm`
+- `chikkarpy`
+- `sudachipy`
+
+## Predictionファイルフォーマット
+
+Predictionファイルのフォーマットは以下の例のとおりです。
+
+```
+{
+  "answer": {
+    "2138f0638f363e75593d09df560db76c": "ファイナルファンタジーXIII",
+    ...
+  },
+  "derivations": {
+    "2138f0638f363e75593d09df560db76c": [
+      [
+        "ダンガンロンパ 希望の学園と絶望の高校生", 
+        "発売日", 
+        ["2010年11月25日"]
+      ], 
+      [
+        "ファイナルファンタジーXIII", 
+        "発売日", 
+        ["2009年12月17日"]
+      ]
+    ],
+    ...
+  }
+}
+```
+
+## 実行方法
+
+回答と導出の予測結果 (`/path/to/your_prediction.json`)を評価するには以下のコマンドを実行してください。
+`python evaluate.py --pred /path/to/your_prediction.json --label corpus_ver1.1/dev_ver1.1.json`
+
+TSV形式の予測結果 (`/path/to/your_gpt_prediction.tsv` カラム：qid, predicted_answer, predicted_derivations)をJSONに変換するスクリプトを以下のように利用できます。
+`python3 tsv_to_pred_json.py -tsv /path/to/your_gpt_prediction.tsv -out /path/to/your_prediction.json`
+
+## 出力フォーマット
+
+評価スクリプトの出力は以下のエンティティからなるJSON形式です。
+
+- `"a"`:回答の*em*(exact match), *score*(similarity match) 
+- `"e"`:導出の*entity-level*のprecision, recall, f1
+- `"r"`: 導出の*relation-level* のprecision, recall, f1
+- `"er"`:  導出の*full* precision, recall, f1
+
+出力の例は以下の通りです。
+
+```
+{
+  "a": {
+    "em": 0.6083333333333333, 
+    "score": 0.6402777777777778
+  }, 
+  "e": {
+    "prec": 0.6740724206349207, 
+    "recall": 0.6534143518518519, 
+    "f1": 0.6587781084656084
+  }, 
+  "r": {
+    "prec": 0.7197156084656083, 
+    "recall": 0.6965674603174603, 
+    "f1": 0.7038822751322751
+  }, 
+  "er": {
+    "prec": 0.6878979276895943, 
+    "recall": 0.6664098324514991, 
+    "f1": 0.6724239417989417
+  }
+}
+```
+
+
+## 
+
 ## ライセンス・謝辞
 
 - 本データセットの著作権は[理化学研究所](https://www.riken.jp/)に帰属し、 [クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt)*の条件のもとに、利用・再配布が許諾されます。*
@@ -84,11 +176,7 @@ JEMHopQA (Japanese Explainable Multi-hop Question Answering)は、回答導出�
 
 - 本データセットを利用した研究成果を発表される際は、以下の文献を参照いただけますと幸いです。
 
-  - 石井愛, 井之上直也, 関根聡. 根拠を説明可能な質問応答システムのための日本語マルチホップQAデータセット構築. 言語処理学会第29回年次大会論文集, 4 pages, March 2023.
-
-  - [https://www.anlp.jp/proceedings/annual_meeting/2023/pdf_dir/Q8-14.pdf](https://www.anlp.jp/proceedings/annual_meeting/2023/pdf_dir/Q8-14.pdf)
-
-- Special thanks: 鈴木久美先生
+  - [石井愛, 井之上直也, 鈴木久美, 関根聡. JEMHopQA: 日本語マルチホップ QA データセットの改良. 言語処理学会第30回年次大会論文集, March 2024. (in japanese)](https://www.anlp.jp/proceedings/annual_meeting/2024/pdf_dir/P3-18.pdf) 
 
 - 本データセット構築の一部はJSPS 科研費 JP20269633 および 19K20332 の助成を受けたものです。記して感謝いたします。
 

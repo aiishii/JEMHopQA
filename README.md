@@ -84,7 +84,7 @@ Evaluation script (`evaluate.py`) is forked from [https://github.com/naoya-i/r4c
 
 ## Dependency
 
-Please install the following Python packages (you can install them via `pip install pulp editdistance tqdm`):
+Please install the following Python packages:
 
 - `pulp`
 - `Levenshtein`
@@ -94,10 +94,7 @@ Please install the following Python packages (you can install them via `pip inst
 
 ## Prediction file format
 
-The prediction file should basically follow [HotpotQA prediction file format](https://github.com/hotpotqa/hotpot#prediction-file-format) (a JSON dictionary).
-On top of `answer` key (answers) and `sp` key (supporting facts), add `re` key for derivations.
-The value of `re` should be a dictionary, where the key is a HotpotQA instance ID and the value is a derivation, similar to `answer` and `sp`.
-Each derivation should follow the same format as [here](#r4c-file-format).
+On top of `answer` key (answers) and `derivations` key for derivations. The value of `derivations` should be a dictionary, where the key is a `qid` and the value is a derivation.
 An example is given below.
 
 ```
@@ -127,16 +124,19 @@ An example is given below.
 ## How to run
 
 To evaluate your prediction (say `/path/to/your_prediction.json`), run the following command:
+`python evaluate.py --pred /path/to/your_prediction.json --label corpus_ver1.1/dev_ver1.1.json`
 
-`python evaluate.py --prediction /path/to/your_prediction.json --label corpus_ver1.1/dev_ver1.1.json`
+If you have output in TSV (`/path/to/your_gpt_prediction.tsv` has following columns: qid, predicted_answer, predicted_derivations), you can convert it to JSON with `tsv_to_pred_json.py` script.
+`python3 tsv_to_pred_json.py -tsv /path/to/your_gpt_prediction.tsv -out /path/to/your_prediction.json`
 
 ## Output format
 
 The script outputs a JSON dictionary consisting of three entries:
 
-- `"e"`: a list. Each element represents *entity-level* precision, recall, and f1.
-- `"r"`: a list. Each element represents *relation-level* precision, recall, and f1.
-- `"er"`: a list. Each element represents *full* precision, recall, and f1.
+- `"a"`: answer's *em* (exact match) and *score* (similarity match) 
+- `"e"`: derivation's entity-level* precision, recall, and f1.
+- `"r"`: derivation's *relation-level* precision, recall, and f1.
+- `"er"`: derivation's *full* precision, recall, and f1.
 
 An example is given below.
 
@@ -157,12 +157,8 @@ An example is given below.
 
 - We would appreciate it if you could refer to the following references when presenting your research results using this dataset.
 
-  - Ai Ishii, Naoya Inoue, Satoshi Sekine. "Construction of a Japanese multi-hop QA dataset for a question-answering system that can explain its reasons". Proceedings of the 29th Annual Conference of the Association for Natural Language Processing (NLP2023)
-  - 石井愛, 井之上直也, 関根聡. 根拠を説明可能な質問応答システムのための日本語マルチホップQAデータセット構築. 言語処理学会第29回年次大会論文集, 4 pages, March 2023.
-
-  - [https://www.anlp.jp/proceedings/annual_meeting/2023/pdf_dir/Q8-14.pdf](https://www.anlp.jp/proceedings/annual_meeting/2023/pdf_dir/Q8-14.pdf)
-
-- Special thanks to Dr. Hisami Suzuki.
+  - Ai Ishii, Naoya Inoue, Hisami Suzuki and Satoshi Sekine. "JEMHopQA: Improved Japanese Multi-Hop QA Dataset". Proceedings of the 30th Annual Conference of the Association for Natural Language Processing (NLP2024)
+  - [石井愛, 井之上直也, 鈴木久美, 関根聡. JEMHopQA: 日本語マルチホップ QA データセットの改良. 言語処理学会第30回年次大会論文集, March 2024. (in japanese)](https://www.anlp.jp/proceedings/annual_meeting/2024/pdf_dir/P3-18.pdf) 
 
 - This work was supported by the  JSPS Grants-in-Aid for Scientific Research JP20269633 and 19K20332. 
 
