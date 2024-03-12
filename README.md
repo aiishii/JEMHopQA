@@ -1,29 +1,41 @@
 # JEMHopQA
 
-#### New Update (November 10, 2023)
+#### New Update (March 12, 2024)
+We have added evaluation scripts and a sample of synonym dictionary.
 
-We have released [corpus_ver1.1](corpus_ver1.1) (`corpus_ver1.1/train_ver1.1.json`, `corpus/dev_ver1.1.json`), which contains several fixes for questions, answers, and triples.
+#### New Update (November 10, 2023)
+We have released [corpus_ver1.1](corpus_ver1.1) (`corpus_ver1.1/train_ver1.1.json`, `corpus_ver1.1/dev_ver1.1.json`), which contains several fixes for questions, answers, and triples.
 
 ## Introduction
 
+
 JEMHopQA (Japanese Explainable Multi-hop Question Answering) is a Japanese multi-hop QA dataset that can evaluate internal reasoning. It is a task that takes a question as input and generates an answer and derivations. Derivations are a set of derivation steps and is a semi-structured representation of relationships between entities. This dataset contains both compositional (linking information from two Wikipedia articles) and comparison (comparing information from two Wikipedia articles) questions.
+
 
 This repository contains the following datasets and script:
 
+
 - JEMHopQA Corpus (`corpus/train.json`, `corpus/dev.json`)
-- Evaluation script (TBA)
+- Evaluation script (`evaluate.py`)
 - Crowdsourcing interface (TBA)
 
+
 This dataset is compatible with the following Wikipedia versions. Please download and use it from the [SHINRA Project](http://shinra-project.info/) page.
+
 
 * [Wikipedia2021 (HTML)](https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20210820-html-v2.zip)
 * [Wikipedia2021 (JSON, CirrusSearchDump)](https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20210823-json.gz)
 
 
 
+
+
+
 ## Data format
 
+
 The question, answer, and derivation sets are provided in the following JSON format.
+
 
 | Key              | Description                                                | Example                                                      |
 | :--------------- | :--------------------------------------------------------- | :----------------------------------------------------------- |
@@ -37,9 +49,14 @@ The question, answer, and derivation sets are provided in the following JSON for
 
 
 
+
+
+
 ### Example of data
 
+
 Below is an example of data for a set of questions, answers, and derivations.
+
 
 ```
 [
@@ -55,41 +72,3 @@ Below is an example of data for a set of questions, answers, and derivations.
 	{
 		"qid": "50faa6719d85a03ae2d5b40d24c8987c",
 		"type": "compositional",
-		"question": "孝明天皇が生涯過ごした都に以前の都から遷都があった年は？",
-		"answer": "794年",
-		"derivations": [["孝明天皇","生涯を過ごした都",["平安京"]],["平安京","遷都された年",["794年"]]],
-		"page_ids": ["266469","7171"],
-		"time_dependent": false
-	},
-...
-```
-
-
-
-## Data Statistics
-
-|           |  all | compositional | comparison |
-| :-------- | ---: | ------------: | ---------: |
-| train set | 1059 |           392 |        667 |
-| dev set   |  120 |            47 |         73 |
-| total     | 1179 |           439 |        740 |
-
-
-
-## License and Acknowledgements
-
-- This dataset is copyrighted by the [RIKEN](https://www.riken.jp/en/about/) and is licensed for use and redistribution under the terms of the [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt). 
-
-  ![https://creativecommons.org/licenses/by-sa/4.0/legalcode](https://i.imgur.com/7HLJWMM.png)
-
-- We would appreciate it if you could refer to the following references when presenting your research results using this dataset.
-
-  - Ai Ishii, Naoya Inoue, Satoshi Sekine. "Construction of a Japanese multi-hop QA dataset for a question-answering system that can explain its reasons". Proceedings of the 29th Annual Conference of the Association for Natural Language Processing (NLP2023)
-  - 石井愛, 井之上直也, 関根聡. 根拠を説明可能な質問応答システムのための日本語マルチホップQAデータセット構築. 言語処理学会第29回年次大会論文集, 4 pages, March 2023.
-
-  - [https://www.anlp.jp/proceedings/annual_meeting/2023/pdf_dir/Q8-14.pdf](https://www.anlp.jp/proceedings/annual_meeting/2023/pdf_dir/Q8-14.pdf)
-
-- Special thanks to Dr. Hisami Suzuki.
-
-- This work was supported by the  JSPS Grants-in-Aid for Scientific Research JP20269633 and 19K20332. 
-
