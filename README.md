@@ -181,8 +181,7 @@ An example is given below.
 
 - We would appreciate it if you could refer to the following references when presenting your research results using this dataset.
 
-  - Ai Ishii, Naoya Inoue, Hisami Suzuki and Satoshi Sekine. "JEMHopQA: Improved Japanese Multi-Hop QA Dataset". Proceedings of the 30th Annual Conference of the Association for Natural Language Processing (NLP2024)
-  - [石井愛, 井之上直也, 鈴木久美, 関根聡. JEMHopQA: 日本語マルチホップ QA データセットの改良. 言語処理学会第30回年次大会論文集, March 2024. (in japanese)](https://www.anlp.jp/proceedings/annual_meeting/2024/pdf_dir/P3-18.pdf) 
+  - Ai Ishii, Naoya Inoue, Hisami Suzuki, and Satoshi Sekine. 2024. [JEMHopQA: Dataset for Japanese Explainable Multi-Hop Question Answering](https://aclanthology.org/2024.lrec-main.831/). In Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024), pages 9515–9525, Torino, Italia. ELRA and ICCL.
 
 - This work was supported by the  JSPS Grants-in-Aid for Scientific Research JP20269633 and 19K20332. 
 

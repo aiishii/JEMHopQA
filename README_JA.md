@@ -184,7 +184,7 @@ TSV形式の予測結果 (`/path/to/your_gpt_prediction.tsv` カラム：qid, pr
 
 - 本データセットを利用した研究成果を発表される際は、以下の文献を参照いただけますと幸いです。
 
-  - [石井愛, 井之上直也, 鈴木久美, 関根聡. JEMHopQA: 日本語マルチホップ QA データセットの改良. 言語処理学会第30回年次大会論文集, March 2024. (in japanese)](https://www.anlp.jp/proceedings/annual_meeting/2024/pdf_dir/P3-18.pdf) 
+  - Ai Ishii, Naoya Inoue, Hisami Suzuki, and Satoshi Sekine. 2024. [JEMHopQA: Dataset for Japanese Explainable Multi-Hop Question Answering](https://aclanthology.org/2024.lrec-main.831/). In Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024), pages 9515–9525, Torino, Italia. ELRA and ICCL.
 
 - 本データセット構築の一部はJSPS 科研費 JP20269633 および 19K20332 の助成を受けたものです。記して感謝いたします。
 
