@@ -88,6 +88,8 @@ JEMHopQA (Japanese Explainable Multi-hop Question Answering)は、回答導出�
 
 評価用スクリプト(`evaluate.py`) は [R4C](https://github.com/naoya-i/r4c/blob/master/src/r4c_evaluate.py) の評価スクリプトに日本語の処理を追加したものです。
 
+また、[CRAG (Contrastive Retrieval-Augmented Generation)](https://github.com/facebookresearch/CRAG) を参考にした LLM による評価スクリプトも [こちら](https://github.com/aiishii/multihop_staged_rag/tree/main/src/evaluation) （⚠️ 2025年4月までに完全版を公開予定）から入手可能です。
+
 ## 使用ライブラリ
 
 以下のPythonパッケージをインストールしてください。
