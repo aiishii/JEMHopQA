@@ -1,5 +1,9 @@
 # JEMHopQA
 
+#### New Update (March 11, 2025)
+
+段階的RAGシステムの実装リポジトリ [multihop_staged_rag](https://github.com/aiishii/multihop_staged_rag) を公開しました。このリポジトリでは、論文「構造化知識 RAG・文書ベース RAG を段階的に利用したマルチホップ QA に対する LLM の精度向上」で提案した手法の実装を提供しています。（⚠️ 2025年4月までに完全版を公開予定）
+
 #### New Update (March 12, 2024)
 
 評価用スクリプトと、スクリプト内で使用する類義語辞書のサンプルを追加しました。
@@ -173,8 +177,12 @@ TSV形式の予測結果 (`/path/to/your_gpt_prediction.tsv` カラム：qid, pr
 }
 ```
 
+## 関連リポジトリ
 
-## 
+JEMHopQAデータセットを利用した実装として、以下のリポジトリも公開しています：
+
+- [multihop_staged_rag](https://github.com/aiishii/multihop_staged_rag) - 構造化知識 RAG・文書ベース RAG を段階的に利用したマルチホップ QA システムの実装（⚠️ 2025年4月までに完全版を公開予定）
+
 
 ## ライセンス・謝辞
 
