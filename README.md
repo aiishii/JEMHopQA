@@ -1,5 +1,9 @@
 # JEMHopQA
 
+#### New Update (March 11, 2025)
+
+We have released the implementation repository [multihop_staged_rag](https://github.com/aiishii/multihop_staged_rag) for our staged RAG system. This repository provides the implementation of the approach proposed in our paper "Improving LLM Accuracy for Multi-hop QA through Staged Utilization of Structured Knowledge RAG and Document-based RAG." (⚠️ Full version to be released by April 2025)
+
 #### New Update (March 12, 2024)
 We have added evaluation scripts and a sample of synonym dictionary.
 
@@ -172,6 +176,11 @@ An example is given below.
 }
 ```
 
+## Related Repositories
+
+We also provide the following repository that uses the JEMHopQA dataset:
+
+- [multihop_staged_rag](https://github.com/aiishii/multihop_staged_rag) - Implementation of a multi-hop QA system that uses structured knowledge RAG and document-based RAG in a staged manner (⚠️ Full version to be released by April 2025)
 
 ## License and Acknowledgements
 
